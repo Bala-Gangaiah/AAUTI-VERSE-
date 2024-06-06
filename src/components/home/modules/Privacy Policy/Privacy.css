@@ -1,0 +1,15 @@
+.privacy_page{
+    text-align: center;
+}
+
+.privacy_image img{
+    width:220px;
+    height:220px;
+}
+
+.privacy_image{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}

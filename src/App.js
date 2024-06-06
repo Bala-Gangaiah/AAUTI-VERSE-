@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/home/Home";
+import About from "./components/aboutUs/About";
+import Services from "./components/services/Services";
+import Feature from "./components/features/Feature";
+import Blog from "./components/blog/Blog";
+import Contact from "./components/contacts/Contact";
+import Terms from "./components/home/modules/Terms and conditions/Terms";
+import Privacy from "./components/home/modules/Privacy Policy/Privacy";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+        <div>
+           <Navbar/>
+           <Routes>
+               <Route path="/" element={<Home/>}/>
+               <Route path="/about" element={<About/>}/>
+               <Route path="/services" element={<Services/>}/>
+               <Route path="/feature" element={<Feature/>}/>
+               <Route path="/blog" element={<Blog/>}/>
+               <Route path="/contact" element={<Contact/>}/>
+               <Route path='/terms' element={<Terms/>}/>
+               <Route path='/privacy' element={<Privacy/>}/>
+           </Routes>
+        </div>
+  )
+};
 
 export default App;
